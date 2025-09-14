@@ -7,7 +7,7 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.delivery.delivery_ms_bff.api.dtos.customers.CustomerInputDTO;
+import com.delivery.delivery_ms_bff.api.dtos.customer.CustomerInputDTO;
 import com.delivery.delivery_ms_bff.domain.services.BffCustomerService;
 
 @RestController

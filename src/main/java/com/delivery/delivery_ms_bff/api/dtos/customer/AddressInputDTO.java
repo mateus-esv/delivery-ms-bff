@@ -1,4 +1,4 @@
-package com.delivery.delivery_ms_bff.api.dtos.customers;
+package com.delivery.delivery_ms_bff.api.dtos.customer;
 
 import lombok.Builder;
 
