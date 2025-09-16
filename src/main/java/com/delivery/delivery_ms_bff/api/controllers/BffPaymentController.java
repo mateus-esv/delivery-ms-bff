@@ -7,19 +7,25 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.delivery.delivery_ms_bff.api.dtos.payment.paymentRequest.PaymentCreditCardMSRequestDTO;
+import com.delivery.delivery_ms_bff.api.dtos.payment.paymentCreditCardRequest.PaymentCreditCardRequestDTO;
+import com.delivery.delivery_ms_bff.api.dtos.payment.paymentPixRequest.PaymentPixRequestDTO;
 import com.delivery.delivery_ms_bff.domain.services.BffPaymentService;
 
 @RestController
 @RequestMapping(path = "/delivery/payment")
 public class BffPaymentController {
-    
+
     @Autowired
     private BffPaymentService service;
 
     @PostMapping("/credit-card")
-    public ResponseEntity<?> creditCard(@RequestBody PaymentCreditCardMSRequestDTO paymentCreditCardMSRequestDTO){
+    public ResponseEntity<?> creditCard(@RequestBody PaymentCreditCardRequestDTO paymentCreditCardMSRequestDTO) {
         return service.creditCard(paymentCreditCardMSRequestDTO);
+    }
+
+    @PostMapping("/generate-pix-code")
+    public ResponseEntity<?> generatePixCode(@RequestBody PaymentPixRequestDTO paymentPixRequestDTO) {
+        return service.generatePixCode(paymentPixRequestDTO);
     }
 
 }

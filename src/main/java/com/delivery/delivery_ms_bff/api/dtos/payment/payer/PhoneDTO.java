@@ -1,4 +1,4 @@
-package com.delivery.delivery_ms_bff.api.dtos.payment.paymentRequest;
+package com.delivery.delivery_ms_bff.api.dtos.payment.payer;
 
 import lombok.Builder;
 

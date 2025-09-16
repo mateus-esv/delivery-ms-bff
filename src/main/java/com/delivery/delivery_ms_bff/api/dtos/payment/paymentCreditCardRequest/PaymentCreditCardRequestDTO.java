@@ -1,12 +1,14 @@
-package com.delivery.delivery_ms_bff.api.dtos.payment.paymentRequest;
+package com.delivery.delivery_ms_bff.api.dtos.payment.paymentCreditCardRequest;
 
 import java.math.BigDecimal;
 import java.util.UUID;
 
+import com.delivery.delivery_ms_bff.api.dtos.payment.payer.PayerDTO;
+
 import lombok.Builder;
 
 @Builder
-public record PaymentCreditCardMSRequestDTO(
+public record PaymentCreditCardRequestDTO(
         UUID idCustomer, // id do cliente que está fazendo o pagamento
         BigDecimal transaction_amount, // valor da transação
         String token, // card token gerado no front
